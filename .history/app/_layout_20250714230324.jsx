@@ -1,0 +1,36 @@
+import { StyleSheet, Text, useColorScheme, View } from 'react-native'
+import React from 'react'
+import { Slot, Stack, Tabs } from 'expo-router'
+//'Slot' allow to display index.jsx file with _layout.jsx file in the same folder
+//'Stack' allow to display back button on the top of a screen 
+import { Colors } from '../constants/Colors.js'
+import { StatusBar } from 'expo-status-bar'
+// 'StatusBar' update colour of time and battery status bar on the screen 
+import { UserProvider } from '../contexts/UserContext.jsx'
+
+
+const RootLayout = () => {
+
+  const colorScheme = useColorScheme()
+  const theme = Colors[colorScheme] ?? Colors.light
+  
+  return (
+    <UserProvider>
+      <StatusBar value="auto" /> 
+      <Stack screenOptions={{
+        headerStyle: { backgroundColor: theme.navBackground },
+        headerTintColor: theme.title
+      }}>
+        <Stack.Screen name="(auth)" options={{ headerShown: false }}/>
+        <Stack.Screen name="(dashboard)" options={{ headerShown: false }}/>
+        <Stack.Screen name="index" options={{ headerShown: false}} />
+        <Stack.Screen name="about" options={{ headerShown: false, title: 'About' }} />
+        <Stack.Screen name="contact" options={{ headerShown: false, title: 'Contact Us' }} />
+      </Stack>
+    </UserProvider>
+  )
+}
+
+export default RootLayout
+
+const styles = StyleSheet.create({})

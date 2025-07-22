@@ -1,0 +1,41 @@
+Account SDK from appwrite 
+
+Account {
+  "client": {
+    "config": {
+      "devkey": "",
+      "endpoint": "https://cloud.appwrite.io/v1",
+      "endpointRealtime": "",
+      "jwt": "",
+      "locale": "",
+      "platform": "dev.darae.second",
+      "project": "6870b04e00337d871e6b",
+      "session": ""
+    },
+    "headers": {
+      "X-Appwrite-Project": "6870b04e00337d871e6b",
+      "X-Appwrite-Response-Format": "1.7.0",
+      "x-sdk-language": "reactnative",
+      "x-sdk-name": "React Native",
+      "x-sdk-platform": "client",
+      "x-sdk-version": "0.10.0"
+    },
+    "realtime": {
+      "channels": [Set],
+      "cleanUp": [Function cleanUp],
+      "connect": [Function connect],
+      "createHeartbeat": [Function createHeartbeat],
+      "createSocket": [Function createSocket],
+      "getTimeout": [Function getTimeout],
+      "heartbeat": undefined,
+      "lastMessage": undefined,
+      "onMessage": [Function onMessage],
+      "reconnect": true,
+      "reconnectAttempts": 0,
+      "socket": undefined,
+      "subscriptions": [Map],
+      "subscriptionsCounter": 0,
+      "timeout": undefined,
+      "url": ""
+    }
+  }}
